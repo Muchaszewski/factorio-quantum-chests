@@ -13,7 +13,7 @@ data:extend{
     type = "recipe",
     name = "singularity",
     enabled = false,
-    category = "smelting",
+    category = "crafting",
     energy_required = 3.2,
     ingredients = {{"stone", 1000}},
     result = "singularity"
