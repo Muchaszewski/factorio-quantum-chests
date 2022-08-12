@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v3
       
       - name: Read Json Properties Action
-        uses: Muchaszewski/read-json-action@1.0.2
+        uses: Muchaszewski/read-json-action@1.0.3
         with:
           path: "./info.json"
           properties: "name, version"
