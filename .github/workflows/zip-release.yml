@@ -16,6 +16,7 @@ jobs:
       
       - name: Read Json Properties Action
         uses: Muchaszewski/read-json-action@1.0.0
+        id: json
         with:
           path: "./info.json"
           properties: "name, version"
@@ -24,11 +25,12 @@ jobs:
         uses: TheDoctor0/zip-release@0.6.2
         with:
           type: zip
-          filename: "{{steps.read_property.outputs.name}}_{{steps.read_property.outputs.version}}.zip"
+          filename: "${{steps.json.outputs.name}}_${{steps.json.outputs.version}}.zip"
           exclusions: "*.git* /*.vscode/* /*.github/*"
 
       - name: Upload Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "{{steps.read_property.outputs.name}}_{{steps.read_property.outputs.version}}.zip"
+          artifacts: "${{steps.json.outputs.name}}_${{steps.json.outputs.version}}.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{steps.json.outputs.version}}
