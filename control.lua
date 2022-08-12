@@ -40,7 +40,7 @@ function InsertFromQuantumChest(cursor_stack_name, playerInventory)
         end
     end
     if chestInventoryWithItem == nil then 
-        game.print({"message.item-missing-in-chest"}, game.item_prototypes[cursor_stack_name].localised_name)
+        game.print({"message.item-missing-in-chest", game.item_prototypes[cursor_stack_name].localised_name})
         return 
     end
     if playerInventory.insert {
