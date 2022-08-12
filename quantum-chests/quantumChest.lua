@@ -37,6 +37,7 @@ quantumChestItem.name = "quantum-chest"
 quantumChestItem.icons = {
   {
     icon = "__quantum-chests__/graphics/hr-quantum-chest-icon.png",
+    icon_size = 64, icon_mipmaps = 4,
   },
 }
 quantumChestItem.place_result = "quantum-chest"
@@ -100,7 +101,8 @@ function extendLogisticsChest(mode, color)
   chestItem.icons = {
     {
       icon = "__quantum-chests__/graphics/hr-quantum-chest-icon.png",
-      tint = {color[1] / 255, color[2] / 255, color[3] /255, color[4] /255}
+      tint = {color[1] / 255, color[2] / 255, color[3] /255, color[4] /255},
+      icon_size = 64, icon_mipmaps = 4,
     },
   }
   chestItem.place_result = "quantum-logistics-chest-" .. mode
