@@ -27,6 +27,7 @@ jobs:
           type: zip
           filename: "${{steps.json.outputs.name}}_${{steps.json.outputs.version}}.zip"
           exclusions: "*.git* /*.vscode/* /*.github/*"
+          path: "quantum-chests"
 
       - name: Upload Release
         uses: ncipollo/release-action@v1
