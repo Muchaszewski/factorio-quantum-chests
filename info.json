@@ -1,0 +1,9 @@
+{
+    "name": "quantum-chests",
+    "version": "0.0.1",
+    "title": "Quantum Chests",
+    "author": "Muchaszewski",
+    "factorio_version": "1.1",
+    "dependencies": ["base >= 1.1"],
+    "description": "This mods connects chests with player Inventory so you will never run out of items when building (hopefully)"
+}
